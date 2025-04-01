@@ -153,11 +153,7 @@ construct_configure_options() {
     --with-zlib \
     --without-snmp"
 
-  if [ "$PHP_CONFIGURE_OPTIONS" = "" ]; then
-    local configure_options="$(os_based_configure_options) $global_config"
-  else
-    local configure_options="$PHP_CONFIGURE_OPTIONS $global_config"
-  fi
+  local configure_options="$(os_based_configure_options) $global_config $PHP_CONFIGURE_OPTIONS"
 
   if [ "${PHP_WITHOUT_PEAR:-no}" != "no" ]; then
     configure_options="$configure_options --without-pear"

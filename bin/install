@@ -148,6 +148,7 @@ construct_configure_options() {
     --with-mysql=mysqlnd \
     --with-mysqli=mysqlnd \
     --with-pdo-mysql=mysqlnd \
+    --with-sodium \
     --with-xmlrpc \
     --with-zip \
     --with-zlib \
